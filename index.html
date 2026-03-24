@@ -1,237 +1,480 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Dearest Divya 💕</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
-            min-height: 100vh;
-            overflow-x: hidden;
-            position: relative;
-        }
-        
-        /* Floating hearts animation */
-        .hearts {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-        }
-        
-        .heart {
-            position: absolute;
-            font-size: 20px;
-            color: #ff69b4;
-            animation: float 6s infinite linear;
-        }
-        
-        @keyframes float {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100px) rotate(360deg);
-                opacity: 0;
-            }
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-            animation: fadeInUp 1s ease-out;
-        }
-        
-        .name {
-            font-family: 'Dancing Script', cursive;
-            font-size: 4rem;
-            font-weight: 700;
-            background: linear-gradient(45deg, #ff6b9d, #c44569, #ff9ff3);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        .subtitle {
-            font-size: 1.5rem;
-            color: #fff;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-            animation: fadeInUp 1s ease-out 0.3s both;
-        }
-        
-        .love-letter {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 30px;
-            padding: 50px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            animation: fadeInUp 1s ease-out 0.6s both;
-            line-height: 1.8;
-            font-size: 1.1rem;
-            color: #333;
-        }
-        
-        .love-letter h2 {
-            font-family: 'Dancing Script', cursive;
-            font-size: 2.5rem;
-            color: #ff6b9d;
-            text-align: center;
-            margin-bottom: 30px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-        }
-        
-        .love-letter p {
-            margin-bottom: 25px;
-            text-align: justify;
-        }
-        
-        .signature {
-            text-align: right;
-            margin-top: 40px;
-            font-family: 'Dancing Script', cursive;
-            font-size: 1.8rem;
-            color: #ff6b9d;
-        }
-        
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            color: #fff;
-            font-size: 1.1rem;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .name {
-                font-size: 3rem;
-            }
-            
-            .love-letter {
-                padding: 30px 20px;
-                margin: 0 10px;
-            }
-            
-            .love-letter h2 {
-                font-size: 2rem;
-            }
-        }
-        
-        /* Sparkle effect */
-        .sparkle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: #fff;
-            border-radius: 50%;
-            animation: sparkle 2s infinite;
-        }
-        
-        @keyframes sparkle {
-            0%, 100% { opacity: 0; transform: scale(0); }
-            50% { opacity: 1; transform: scale(1); }
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>For Divya 🌸</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Lato:wght@300;400&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --rose:       #e8647a;
+    --blush:      #f4a7b3;
+    --petal:      #fce8ed;
+    --cream:      #fff9f5;
+    --deep:       #7a2d3e;
+    --text:       #4a2030;
+    --muted:      #b07080;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    min-height: 100vh;
+    background: var(--cream);
+    font-family: 'Lato', sans-serif;
+    color: var(--text);
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* ── Noise texture overlay ── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 0;
+  }
+
+  /* ── Canvas for floating hearts ── */
+  #canvas {
+    position: fixed; inset: 0;
+    pointer-events: none; z-index: 1;
+  }
+
+  /* ── Gradient blobs ── */
+  .blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.18;
+    pointer-events: none;
+    z-index: 0;
+    animation: drift 18s ease-in-out infinite alternate;
+  }
+  .blob-1 { width: 500px; height: 500px; background: var(--rose);   top: -120px; left: -100px; animation-duration: 20s; }
+  .blob-2 { width: 400px; height: 400px; background: var(--blush);  bottom: -80px; right: -80px; animation-duration: 16s; animation-delay: -6s; }
+  .blob-3 { width: 300px; height: 300px; background: #f7c5d0; top: 40%; left: 60%; animation-duration: 22s; animation-delay: -10s; }
+
+  @keyframes drift {
+    from { transform: translate(0, 0) scale(1); }
+    to   { transform: translate(30px, 20px) scale(1.08); }
+  }
+
+  /* ── Page layout ── */
+  main {
+    position: relative; z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 24px 60px;
+    gap: 64px;
+  }
+
+  /* ── Hero section ── */
+  .hero {
+    text-align: center;
+    animation: fadeUp 1.2s ease both;
+  }
+  .hero .eyebrow {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.35em;
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(3rem, 10vw, 6.5rem);
+    line-height: 1.1;
+    color: var(--deep);
+    text-shadow: 0 0 60px rgba(232,100,122,0.25);
+    margin-bottom: 16px;
+  }
+  .hero h1 span {
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--rose);
+    filter: drop-shadow(0 0 12px rgba(232,100,122,0.4));
+  }
+  .hero .divider {
+    display: flex; align-items: center; justify-content: center;
+    gap: 12px; margin: 28px auto;
+  }
+  .hero .divider::before, .hero .divider::after {
+    content: ''; display: block;
+    width: 60px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--blush));
+  }
+  .hero .divider::after { background: linear-gradient(90deg, var(--blush), transparent); }
+  .hero .divider svg { width: 18px; height: 18px; fill: var(--rose); opacity: 0.7; }
+
+  /* ── Letter card ── */
+  .letter {
+    max-width: 620px;
+    width: 100%;
+    background: rgba(255,255,255,0.65);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(244,167,179,0.35);
+    border-radius: 24px;
+    padding: 48px 44px;
+    box-shadow: 0 8px 48px rgba(232,100,122,0.10),
+                0 2px 8px rgba(0,0,0,0.04);
+    animation: fadeUp 1.2s 0.3s ease both;
+    position: relative;
+    overflow: hidden;
+  }
+  .letter::before {
+    content: '❝';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 8rem;
+    color: var(--blush);
+    opacity: 0.25;
+    position: absolute;
+    top: -16px; left: 16px;
+    line-height: 1;
+    pointer-events: none;
+  }
+  .letter p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.05rem, 2.5vw, 1.28rem);
+    font-weight: 300;
+    line-height: 1.95;
+    color: var(--text);
+    position: relative; z-index: 1;
+    margin-bottom: 20px;
+  }
+  .letter p:last-of-type { margin-bottom: 0; }
+  .letter .sig {
+    display: block;
+    margin-top: 28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--muted);
+    text-align: right;
+  }
+
+  /* ── Proposal section ── */
+  .proposal {
+    text-align: center;
+    animation: fadeUp 1.2s 0.6s ease both;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  .proposal h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 6vw, 3.2rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--deep);
+    text-shadow: 0 0 40px rgba(232,100,122,0.2);
+  }
+
+  .btn-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn {
+    padding: 16px 48px;
+    border: none; outline: none; cursor: pointer;
+    border-radius: 50px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    position: relative;
+  }
+  .btn-yes {
+    background: linear-gradient(135deg, var(--rose), #c94f66);
+    color: #fff;
+    box-shadow: 0 6px 28px rgba(232,100,122,0.4);
+  }
+  .btn-yes:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 12px 40px rgba(232,100,122,0.55);
+  }
+  .btn-yes:active { transform: scale(0.97); }
+
+  .btn-no {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid rgba(176,112,128,0.35);
+    box-shadow: none;
+  }
+  .btn-no:hover {
+    background: rgba(244,167,179,0.12);
+    border-color: var(--blush);
+    color: var(--rose);
+  }
+
+  /* ── Response message ── */
+  .response-msg {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    animation: popIn 0.5s cubic-bezier(0.34,1.56,0.64,1) both;
+  }
+  .response-msg.visible { display: flex; }
+  .response-msg .big-heart {
+    font-size: 3rem;
+    animation: pulse 1.2s ease-in-out infinite;
+  }
+  .response-msg p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--deep);
+    text-align: center;
+    max-width: 420px;
+    line-height: 1.7;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50%       { transform: scale(1.18); }
+  }
+  @keyframes popIn {
+    from { opacity: 0; transform: scale(0.6); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(32px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── Footer ── */
+  footer {
+    position: relative; z-index: 2;
+    text-align: center;
+    padding: 0 0 36px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+  footer span { color: var(--rose); }
+
+  /* ── Responsive tweaks ── */
+  @media (max-width: 480px) {
+    .letter { padding: 36px 28px; }
+    main { padding: 60px 16px 40px; gap: 48px; }
+  }
+</style>
 </head>
 <body>
-    <div class="hearts" id="hearts"></div>
-    
-    <div class="container">
-        <div class="header">
-            <h1 class="name">Divya 💖</h1>
-            <p class="subtitle">My Forever Love, My Everything ✨</p>
-        </div>
-        
-        <div class="love-letter">
-            <h2>My Dearest Divya,</h2>
-            <p>From the very first moment I saw you, my heart knew you were the one—the missing piece that completed my soul. Every beat of my heart whispers your name, every breath I take is filled with thoughts of you, and every dream I have features your beautiful smile lighting up my world. You are not just my girlfriend; you are my sunshine on the cloudiest days, my strength when I feel weak, and my greatest joy in every moment we share. Your laughter is the melody that soothes my soul, your touch is the warmth that melts away all my worries, and your love is the foundation upon which I build my entire life.</p>
-            
-            <p>I love you more than words can ever express, Divya. You bring color to my monochrome world, turning ordinary moments into magical memories that I cherish forever. Your kindness touches everyone around you, but it’s the way you love me—with such pure, unconditional devotion—that makes me feel like the luckiest man alive. You value me in ways I never thought possible, seeing the best in me even when I doubt myself, lifting me up with your encouragement, and standing by my side through every storm. In you, I’ve found not just a partner, but my best friend, my confidante, and my greatest adventure.</p>
-            
-            <p>Every day with you feels like a gift, a beautiful chapter in the love story we’re writing together. You make me want to be better, to love deeper, to live fuller. The way your eyes sparkle when you’re happy, the gentle way you hold my hand, the warmth of your hugs that make everything right again—it’s these little things that make my heart overflow with love for you. You are my safe haven, my wildest dream, and the most precious treasure I’ll ever hold. No distance can keep us apart, no challenge too great when we face it together, because our love is unbreakable, timeless, and eternal.</p>
-            
-            <p>Divya, you are the value in my life—the reason I wake up excited for tomorrow, the motivation behind every goal I chase, and the heartbeat that keeps me going. I promise to love you fiercely, protect you always, and make you feel as cherished as you make me feel every single day. You are my everything, my forever, my happily ever after. With all that I am and all that I’ll ever be, I love you beyond measure, today and for all the tomorrows to come.</p>
-            
-            <div class="signature">
-                Forever Yours,<br>
-                💕 Your Loving Boyfriend 💕
-            </div>
-        </div>
-        
-        <div class="footer">
-            Made with endless love just for you, Divya 🌸💖
-        </div>
+
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="blob blob-3"></div>
+<canvas id="canvas"></canvas>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero">
+    <p class="eyebrow">A letter for you</p>
+    <h1>
+      Divya,
+      <span>you are my everything.</span>
+    </h1>
+    <div class="divider">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+                 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09
+                 C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5
+                 c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Letter -->
+  <section class="letter">
+    <p>
+      Divya, I don't know exactly when things started to change for me. Somewhere
+      between our random conversations, shared laughs, and those little moments we
+      often overlooked, you became incredibly special in my life. It wasn't sudden
+      or dramatic; it just happened naturally. Before I knew it, I found myself
+      thinking about you more than anyone else.
+    </p>
+    <p>
+      There's something about you that feels different. Maybe it's your smile, the
+      way you express yourself, or the comfort I feel when talking to you. Even our
+      simplest conversations can turn an ordinary day into something memorable.
+      You've brought a happiness, peace, and positivity into my life that I didn't
+      realize I was missing before you came along.
+    </p>
+    <p>
+      I won't claim to have perfect words or grand promises. I believe the best
+      things are simple and honest. What I know is that I truly value you, and I
+      feel something real that I can't ignore. Being around you feels easy,
+      natural, and right. It's something I want to nurture and grow over time.
+    </p>
+    <p>
+      I don't know what the future holds, but I really want to take a chance on
+      us. I want to create something meaningful and real, step by step. So today,
+      with honesty and a bit of courage, I want to ask you something that means
+      a lot to me…
+    </p>
+    <span class="sig">— Dhruv</span>
+  </section>
+
+  <!-- Proposal -->
+  <section class="proposal">
+    <h2>Will you be mine? 💖</h2>
+
+    <div class="btn-group" id="btnGroup">
+      <button class="btn btn-yes" onclick="handleYes()">Yes ❤️</button>
+      <button class="btn btn-no" onclick="handleNo()">No</button>
     </div>
 
-    <script>
-        // Create floating hearts
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.className = 'heart';
-            heart.innerHTML = '💖';
-            heart.style.left = Math.random() * 100 + '%';
-            heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
-            heart.style.fontSize = (Math.random() * 10 + 15) + 'px';
-            document.getElementById('hearts').appendChild(heart);
-            
-            setTimeout(() => {
-                heart.remove();
-            }, 7000);
-        }
-        
-        // Generate hearts continuously
-        setInterval(createHeart, 300);
-        
-        // Create sparkles on the letter
-        function createSparkle() {
-            const sparkle = document.createElement('div');
-            sparkle.className = 'sparkle';
-            sparkle.style.left = Math.random() * 100 + '%';
-            sparkle.style.top = Math.random() * 100 + '%';
-            sparkle.style.animationDelay = Math.random() * 2 + 's';
-            document.querySelector('.love-letter').appendChild(sparkle);
-            
-            setTimeout(() => {
-                sparkle.remove();
-            }, 2000);
-        }
-        
-        setInterval(createSparkle, 1000);
-    </script>
+    <div class="response-msg" id="responseMsg">
+      <div class="big-heart">❤️</div>
+      <p id="responseText"></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>Made with <span>❤️</span> by Dhruv</footer>
+
+<script>
+  /* ── Floating hearts canvas ── */
+  (() => {
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    let W, H, hearts = [];
+
+    function resize() {
+      W = canvas.width  = window.innerWidth;
+      H = canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    const COLORS = ['#e8647a','#f4a7b3','#f7c5d0','#c94f66','#fce8ed'];
+
+    class Heart {
+      constructor() { this.reset(true); }
+      reset(initial) {
+        this.x    = Math.random() * W;
+        this.y    = initial ? Math.random() * H : H + 20;
+        this.size = 8 + Math.random() * 14;
+        this.speed= 0.4 + Math.random() * 0.7;
+        this.drift= (Math.random() - 0.5) * 0.6;
+        this.alpha= 0.12 + Math.random() * 0.22;
+        this.color= COLORS[Math.floor(Math.random() * COLORS.length)];
+        this.angle= (Math.random() - 0.5) * 0.4;
+        this.spin = (Math.random() - 0.5) * 0.006;
+      }
+      draw() {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.angle);
+        ctx.globalAlpha = this.alpha;
+        ctx.fillStyle   = this.color;
+        ctx.beginPath();
+        const s = this.size;
+        ctx.moveTo(0, s * 0.35);
+        ctx.bezierCurveTo(-s * 0.55, -s * 0.1, -s, s * 0.1, 0, s);
+        ctx.bezierCurveTo( s, s * 0.1,  s * 0.55, -s * 0.1, 0, s * 0.35);
+        ctx.fill();
+        ctx.restore();
+      }
+      update() {
+        this.y     -= this.speed;
+        this.x     += this.drift;
+        this.angle += this.spin;
+        if (this.y < -20) this.reset(false);
+      }
+    }
+
+    for (let i = 0; i < 28; i++) hearts.push(new Heart());
+
+    function animate() {
+      ctx.clearRect(0, 0, W, H);
+      hearts.forEach(h => { h.update(); h.draw(); });
+      requestAnimationFrame(animate);
+    }
+    animate();
+  })();
+
+  /* ── Buttons ── */
+  function handleYes() {
+    document.getElementById('btnGroup').style.display = 'none';
+    const msg = document.getElementById('responseMsg');
+    document.getElementById('responseText').textContent =
+      "You just made me the happiest person alive. ❤️";
+    msg.classList.add('visible');
+    burst();
+  }
+
+  function handleNo() {
+    document.getElementById('btnGroup').style.display = 'none';
+    const msg = document.getElementById('responseMsg');
+    document.getElementById('responseText').textContent =
+      "Try again 😄 I know you meant Yes!";
+    msg.classList.add('visible');
+    // Reset after 2s so they can try again
+    setTimeout(() => {
+      msg.classList.remove('visible');
+      document.getElementById('btnGroup').style.display = 'flex';
+    }, 2000);
+  }
+
+  /* ── Confetti burst on Yes ── */
+  function burst() {
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const pieces = [];
+    const colors = ['#e8647a','#f4a7b3','#c94f66','#fce8ed','#fff','#f7c5d0'];
+    for (let i = 0; i < 60; i++) {
+      pieces.push({
+        x: window.innerWidth / 2,
+        y: window.innerHeight / 2,
+        vx: (Math.random() - 0.5) * 14,
+        vy: (Math.random() - 0.5) * 14 - 4,
+        size: 4 + Math.random() * 6,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        alpha: 1, gravity: 0.3
+      });
+    }
+    let frame = 0;
+    function drawBurst() {
+      frame++;
+      if (frame > 80) return;
+      pieces.forEach(p => {
+        p.x += p.vx; p.y += p.vy; p.vy += p.gravity;
+        p.alpha -= 0.012;
+        ctx.save();
+        ctx.globalAlpha = Math.max(0, p.alpha);
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      });
+      requestAnimationFrame(drawBurst);
+    }
+    drawBurst();
+  }
+</script>
 </body>
-</html> 
+</html>
